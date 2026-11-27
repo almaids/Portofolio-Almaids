@@ -9,7 +9,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Pinyon+Script&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    
+
+    <style>
+        /* Tombol Resume, Ijazah, dan Transkrip Nilai sejajar menyamping */
+        .cta-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cta-container .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            white-space: nowrap;
+            margin: 0;
+        }
+
+        /* Di layar HP yang sangat kecil, tombol tetap sejajar dan mengecil */
+        @media (max-width: 480px) {
+            .cta-container {
+                gap: 8px;
+            }
+
+            .cta-container .cta-button {
+                padding: 10px 14px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="dot-pattern"></div>
@@ -111,8 +142,14 @@
                     </div>
                         
                     <div class="cta-container">
-                        <a href="Almaidah Isnaeni S.Kom - Resume.pdf" class="cta-button cta-primary">
-                            <i class="fas fa-file-alt"></i> View Resume
+                        <a href="Almaidah Isnaeni S.Kom - Resume.pdf" class="cta-button cta-primary" target="_blank" rel="noopener">
+                            <i class="fas fa-file-alt"></i>Resume
+                        </a>
+                        <a href="Almaidah Isnaeni S.Kom - Ijazah.pdf" class="cta-button cta-primary" target="_blank" rel="noopener">
+                            <i class="fas fa-graduation-cap"></i>Ijazah
+                        </a>
+                        <a href="Almaidah Isnaeni S.Kom - Transkrip Nilai.pdf" class="cta-button cta-primary" target="_blank" rel="noopener">
+                            <i class="fas fa-scroll"></i>Transkrip Nilai
                         </a>
                     </div>
                 </div>
